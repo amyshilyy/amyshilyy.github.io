@@ -624,14 +624,12 @@ ul {
 }
 
 .timeline-details li::before {
-  content: '';
+  content: '✦';
   position: absolute;
   left: 0;
-  top: 0.65em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--color-rose);
+  top: 0.15em;
+  font-size: 0.8rem;
+  color: var(--color-rose);
 }
 
 /* ---------- Involvement ---------- */
@@ -719,14 +717,12 @@ ul {
 }
 
 .involvement-card li::before {
-  content: '';
+  content: '✦';
   position: absolute;
   left: 0;
-  top: 0.65em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--color-warm);
+  top: 0.15em;
+  font-size: 0.8rem;
+  color: var(--color-rose);
 }
 
 .involvement-images {
@@ -737,21 +733,36 @@ ul {
 }
 
 .involvement-image {
-  background: var(--color-bg-alt);
-  border-radius: 12px;
-  padding: 0.75rem;
-  border: 1px solid var(--color-border);
+  position: relative;
+  border-radius: 16px;
+  padding: 1px;
+  background:
+    linear-gradient(135deg, rgba(108, 99, 255, 0.35), rgba(201, 146, 157, 0.35));
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
 }
 
 .involvement-image img {
-  border-radius: 8px;
+  border-radius: 15px;
+  display: block;
 }
 
 .involvement-image figcaption {
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   font-size: 0.75rem;
   color: var(--color-text-light);
   text-align: center;
+}
+
+.involvement-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.7) 1px, transparent 2px),
+    radial-gradient(circle at 78% 72%, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0.6) 1px, transparent 2px);
+  opacity: 0.35;
 }
 
 /* ---------- Skills ---------- */
