@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amy Ly — Electrical &amp; Computer Engineer</title>
+  <script>
+    (function() {
+      try {
+        var storedTheme = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = storedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (error) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">A<span>L</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#involvement">Involvement</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a7.5 7.5 0 0 0 9 9A9 9 0 1 1 12 3z"/></svg>
+          <span class="theme-toggle-text">Theme</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-content">
+      <h1 class="hero-name animate-in">Amy Ly</h1>
+      <div class="hero-title animate-in delay-1">
+        <span class="title-line"></span>
+        <p>Electrical &amp; Computer Engineering Student</p>
+        <span class="title-line"></span>
+      </div>
+      <p class="hero-subtitle animate-in delay-2">Oregon State University · Class of 2028</p>
+      <div class="hero-cta animate-in delay-3">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="scroll-indicator animate-in delay-4">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm an Electrical and Computer Engineering student at <strong>Oregon State University</strong> with a
+            minor in Computer Science. With a passion for hardware design and embedded systems, I thrive at the
+            intersection of electrical engineering and software development.
+          </p>
+          <p>
+            From designing high-voltage detection PCBs for Formula SAE racing to teaching circuit fundamentals
+            as a Learning Assistant, I bring a hands-on, collaborative approach to every challenge.
+            As a <strong>Ford Family Scholar</strong> and former <strong>Valedictorian</strong>,
+            I am driven by curiosity and a commitment to excellence in engineering.
+          </p>
+        </div>
+        <div class="about-highlights reveal">
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+            </div>
+            <div class="highlight-text">
+              <h4>3.79 GPA</h4>
+              <p>Oregon State University</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
+            </div>
+            <div class="highlight-text">
+              <h4>Ford Family Scholar</h4>
+              <p>Award Recipient</p>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6"/><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>
+            </div>
+            <div class="highlight-text">
+              <h4>Valedictorian</h4>
+              <p>Cascade High School</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal">Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Undergraduate Learning Assistant</h3>
+                <p class="timeline-company">Electrical Fundamentals · Oregon State University</p>
+              </div>
+              <span class="timeline-date">Jan 2026 — Present</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Led weekly laboratory sessions for 25 students, ensuring proper use of power supplies, digital multimeters, and basic electronic components.</li>
+              <li>Facilitated problem-driven recitations strengthening student understanding of Kirchhoff's Laws, operational amplifiers, and first-order RC/RL circuits.</li>
+              <li>Delivered one-on-one instruction during office hours, guiding students through complex multi-loop and multi-node circuit analysis.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Technology Intern</h3>
+                <p class="timeline-company">Willamette Education Service District</p>
+              </div>
+              <span class="timeline-date">Jul 2024 — Aug 2024</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Triaged help desk calls at the first point of contact and created tickets for escalations when necessary.</li>
+              <li>Migrated Microsoft laptops and desktops from ManageEngine to Intune using Autopilot and Azure Active Directory.</li>
+              <li>Joined daily standups for help desk operations and participated in summer project sprints.</li>
+              <li>Attended PatchMyPC training for application deployment in a Microsoft/Intune environment.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Involvement Section -->
+  <section class="section involvement" id="involvement">
+    <div class="container">
+      <h2 class="section-title reveal">Involvement</h2>
+      <div class="involvement-grid">
+        <div class="involvement-card reveal">
+          <div class="card-accent"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><polyline points="16 3 12 7 8 3"/></svg>
+          </div>
+          <h3>Global Formula Racing</h3>
+          <p class="card-role">Electrical / Electronics Engineer</p>
+          <span class="card-date">Sept 2024 — Present</span>
+          <ul>
+            <li>Designed and implemented critical high-voltage detection PCB, ensuring driver and vehicle safety.</li>
+            <li>Collaborated with a team to design, manufacture, and test the Ready To Move Light PCB for Formula SAE.</li>
+            <li>Supported wire harnessing and electrical subsystem assembly, ensuring compliance with FSAE electrical safety rules.</li>
+            <li>Validated PCB functionality through bench testing, waveform analysis, and power supply verification.</li>
+          </ul>
+        </div>
+        <div class="involvement-card reveal">
+          <div class="card-accent"></div>
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Society of Women Engineers</h3>
+          <p class="card-role">Active Member</p>
+          <span class="card-date">Sept 2024 — Present</span>
+          <ul>
+            <li>Participated in hands-on electronics workshops focused on circuit assembly, soldering, and troubleshooting techniques.</li>
+            <li>Engaged with a community of women engineers to promote diversity and inclusion in STEM fields.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Skills &amp; Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Programming
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            Technical Skills
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PCB Design</span>
+            <span class="skill-tag">Reflow Soldering</span>
+            <span class="skill-tag">Hand Soldering</span>
+            <span class="skill-tag">Oscilloscope</span>
+            <span class="skill-tag">Function Generator</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Design &amp; CAD Software
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Altium</span>
+            <span class="skill-tag">KiCad</span>
+            <span class="skill-tag">COMSOL</span>
+            <span class="skill-tag">Siemens NX</span>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            Productivity &amp; DevOps
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Jira</span>
+            <span class="skill-tag">Confluence</span>
+            <span class="skill-tag">Snipe-IT</span>
+            <span class="skill-tag">Microsoft Intune</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section education" id="education">
+    <div class="container">
+      <h2 class="section-title reveal">Education</h2>
+      <div class="education-card reveal">
+        <div class="edu-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
+        </div>
+        <div class="edu-details">
+          <h3>Oregon State University</h3>
+          <p class="edu-location">Corvallis, Oregon</p>
+          <div class="edu-info">
+            <div>
+              <p class="edu-degree">Bachelor of Science, Electrical &amp; Computer Engineering</p>
+              <p class="edu-minor">Minor in Computer Science</p>
+            </div>
+            <div class="edu-meta">
+              <span class="edu-gpa">GPA: 3.79</span>
+              <span class="edu-grad">Graduation: 2028</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Let's Connect</h2>
+      <p class="contact-subtitle reveal">I'm always open to new opportunities, collaborations, and conversations about engineering.</p>
+      <div class="contact-links reveal">
+        <a href="mailto:amyshily@gmail.com" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p>amyshily@gmail.com</p>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/amyshily" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </div>
+          <div>
+            <h4>LinkedIn</h4>
+            <p>linkedin.com/in/amyshily</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Amy Ly. Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
