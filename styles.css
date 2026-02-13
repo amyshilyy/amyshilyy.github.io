@@ -637,6 +637,10 @@ ul {
   background: var(--color-bg);
 }
 
+.projects {
+  background: var(--color-bg-alt);
+}
+
 .involvement-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
