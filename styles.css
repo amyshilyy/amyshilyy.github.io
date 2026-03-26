@@ -29,8 +29,10 @@
   --hero-pattern-c: rgba(212, 165, 116, 0.06);
 
   /* Typography */
-  --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans:  'Playpen Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-serif: 'Source Serif 4', 'Georgia', serif;
+  --font-caveat: 'Caveat Brush', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body:  'Patrick Hand', 'Playpen Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Spacing */
   --section-pad: clamp(4rem, 10vw, 8rem);
@@ -78,9 +80,11 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
+  cursor: url("images/custom-cursor.png") 0 0,
+    url("https://www.rw-designer.com/cursor-extern.php?id=200938"), auto;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -114,7 +118,7 @@ ul {
 }
 
 .section-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-caveat);
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 3rem;
@@ -294,13 +298,39 @@ ul {
 .hero {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
   background: var(--hero-gradient);
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 1;
+  width: min(1080px, 100%);
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 520px);
+  align-items: center;
+  gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.hero-cover {
+  position: relative;
+  justify-self: end;
+  pointer-events: none;
+}
+
+.hero-cover img {
+  width: min(520px, 46vw);
+  opacity: 0.58;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+:root[data-theme='dark'] .hero-cover img {
+  opacity: 0.48;
 }
 
 .hero-bg-pattern {
@@ -316,7 +346,9 @@ ul {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 0 1.5rem;
+  max-width: 560px;
+  justify-self: center;
+  text-align: center;
 }
 
 .hero-greeting {
@@ -329,21 +361,44 @@ ul {
 }
 
 .hero-name {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-family: var(--font-caveat);
+  font-size: clamp(1.95rem, 5.3vw, 3.05rem);
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.03em;
   color: var(--color-text);
   margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.6rem;
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.name-text {
+  display: inline-block;
+}
+
+.name-deco {
+  font-family: var(--font-sans);
+  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--color-rose);
+  white-space: nowrap;
 }
 
 .hero-title {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   gap: 1rem;
   margin-bottom: 1rem;
+  flex-wrap: nowrap;
 }
 
 .hero-title p {
@@ -354,16 +409,20 @@ ul {
 }
 
 .title-line {
-  display: block;
-  width: 3rem;
-  height: 1px;
-  background: var(--color-rose);
+  display: inline-block;
+  color: var(--color-rose);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .hero-subtitle {
   font-size: 0.95rem;
   color: var(--color-text-light);
   margin-bottom: 2.5rem;
+  font-family: var(--font-body);
 }
 
 .hero-cta {
@@ -834,6 +893,7 @@ ul {
   background: var(--color-bg-alt);
   color: var(--color-text-light);
   border: 1px solid var(--color-border);
+  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -841,6 +901,11 @@ ul {
   background: var(--color-accent-soft);
   color: var(--color-accent);
   border-color: var(--color-accent);
+}
+
+.skill-tag:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
 }
 
 /* ---------- Education ---------- */
@@ -945,6 +1010,7 @@ ul {
   color: var(--color-text-light);
   max-width: 520px;
   margin: -1.5rem auto 2.5rem;
+  font-family: var(--font-body);
 }
 
 .contact-links {
@@ -1106,24 +1172,57 @@ ul {
   }
 
   /* Hero */
+  .hero {
+    text-align: center;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-cover {
+    justify-self: center;
+  }
+
+  .hero-cover img {
+    width: min(560px, 88vw);
+    opacity: 0.28;
+  }
+
+  :root[data-theme='dark'] .hero-cover img {
+    opacity: 0.22;
+  }
+
+  .hero-title,
+  .hero-cta {
+    justify-content: center;
+  }
+
   .title-line {
-    width: 1.5rem;
+    font-size: 0.85rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-name {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
+    gap: 0.5rem;
+  }
+
+  .name-deco {
+    font-size: clamp(0.72rem, 6.6vw, 0.95rem);
+    transform: translateY(-0.03em);
   }
 
   .hero-title {
-    flex-direction: column;
-    gap: 0.25rem;
+    flex-direction: row;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
   }
 
   .title-line {
-    width: 2rem;
-    height: 1px;
+    font-size: clamp(0.72rem, 4.7vw, 0.9rem);
   }
 
   .timeline {

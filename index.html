@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Inter:wght@300;400;500;600;700&family=Playpen+Sans:wght@300;400;500;600;700&family=Patrick+Hand&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
   <!-- Navigation -->
@@ -52,17 +52,26 @@
   <!-- Hero Section -->
   <section class="hero" id="hero">
     <div class="hero-bg-pattern"></div>
-    <div class="hero-content">
-      <h1 class="hero-name animate-in">Amy Ly</h1>
-      <div class="hero-title animate-in delay-1">
-        <span class="title-line"></span>
-        <p>Electrical &amp; Computer Engineering Student</p>
-        <span class="title-line"></span>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <h1 class="hero-name animate-in">
+          <span class="name-deco name-deco-left" aria-hidden="true">⋆ ˚｡ ⋆୨♡୧⋆ ˚｡ ⋆</span>
+          <span class="name-text">Amy Ly</span>
+          <span class="name-deco name-deco-right" aria-hidden="true">⋆ ˚｡ ⋆୨♡୧⋆ ˚｡ ⋆</span>
+        </h1>
+        <div class="hero-title animate-in delay-1">
+          <span class="title-line" aria-hidden="true">❀⋆.ೃ</span>
+          <p>Electrical and Computer Engineer</p>
+          <span class="title-line" aria-hidden="true">ೃ.⋆❀</span>
+        </div>
+        <p class="hero-subtitle animate-in delay-2">Oregon State University · Class of 2028</p>
+        <div class="hero-cta animate-in delay-3">
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          <a href="#about" class="btn btn-outline">Learn More</a>
+        </div>
       </div>
-      <p class="hero-subtitle animate-in delay-2">Oregon State University · Class of 2028</p>
-      <div class="hero-cta animate-in delay-3">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        <a href="#about" class="btn btn-outline">Learn More</a>
+      <div class="hero-cover animate-in delay-2" aria-hidden="true">
+        <img src="images/hero-cover.png" alt="" />
       </div>
     </div>
     <div class="scroll-indicator animate-in delay-4">
@@ -238,9 +247,9 @@
             Programming
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">Python</span>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/C%2B%2B" target="_blank" rel="noopener noreferrer">C++</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer">C</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank" rel="noopener noreferrer">Python</a>
           </div>
         </div>
         <div class="skill-category reveal">
@@ -249,11 +258,11 @@
             Technical Skills
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag">PCB Design</span>
-            <span class="skill-tag">Reflow Soldering</span>
-            <span class="skill-tag">Hand Soldering</span>
-            <span class="skill-tag">Oscilloscope</span>
-            <span class="skill-tag">Function Generator</span>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Printed_circuit_board" target="_blank" rel="noopener noreferrer">PCB Design</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Reflow_soldering" target="_blank" rel="noopener noreferrer">Reflow Soldering</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Soldering" target="_blank" rel="noopener noreferrer">Hand Soldering</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Oscilloscope" target="_blank" rel="noopener noreferrer">Oscilloscope</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Function_generator" target="_blank" rel="noopener noreferrer">Function Generator</a>
           </div>
         </div>
         <div class="skill-category reveal">
@@ -262,10 +271,10 @@
             Design &amp; CAD Software
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag">Altium</span>
-            <span class="skill-tag">KiCad</span>
-            <span class="skill-tag">COMSOL</span>
-            <span class="skill-tag">Siemens NX</span>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Altium_Designer" target="_blank" rel="noopener noreferrer">Altium</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/KiCad" target="_blank" rel="noopener noreferrer">KiCad</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/COMSOL" target="_blank" rel="noopener noreferrer">COMSOL</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Siemens_NX" target="_blank" rel="noopener noreferrer">Siemens NX</a>
           </div>
         </div>
         <div class="skill-category reveal">
@@ -274,11 +283,11 @@
             Productivity &amp; DevOps
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag">Jira</span>
-            <span class="skill-tag">Confluence</span>
-            <span class="skill-tag">Snipe-IT</span>
-            <span class="skill-tag">Microsoft Intune</span>
-            <span class="skill-tag">VS Code</span>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Jira_(software)" target="_blank" rel="noopener noreferrer">Jira</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Confluence_(software)" target="_blank" rel="noopener noreferrer">Confluence</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Snipe-IT" target="_blank" rel="noopener noreferrer">Snipe-IT</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Microsoft_Intune" target="_blank" rel="noopener noreferrer">Microsoft Intune</a>
+            <a class="skill-tag" href="https://en.wikipedia.org/wiki/Visual_Studio_Code" target="_blank" rel="noopener noreferrer">VS Code</a>
           </div>
         </div>
       </div>
