@@ -163,4 +163,5 @@ document.addEventListener('DOMContentLoaded', () => {
       child.style.transitionDelay = `${index * 0.1}s`;
     });
   });
+
 });

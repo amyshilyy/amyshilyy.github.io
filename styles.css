@@ -42,26 +42,27 @@
 }
 
 :root[data-theme='dark'] {
-  --color-bg:         #0F1220;
-  --color-bg-alt:     #151A2B;
-  --color-surface:    #1B2236;
-  --color-text:       #EEF1FF;
-  --color-text-light: #B8C0D8;
-  --color-accent:     #9A8CFF;
-  --color-accent-soft:#2A3050;
+  /* Cool violet pastel dark palette */
+  --color-bg:         #191A34;
+  --color-bg-alt:     #212242;
+  --color-surface:    #2A2B52;
+  --color-text:       #F1EEFF;
+  --color-text-light: #CDC7E8;
+  --color-accent:     #A896FF;
+  --color-accent-soft:#343468;
   --color-warm:       #F0B37E;
-  --color-warm-soft:  #332A23;
-  --color-rose:       #D7A1B2;
-  --color-rose-soft:  #332635;
-  --color-border:     #2A3352;
-  --color-navbar-bg: rgba(15, 18, 32, 0.84);
-  --color-navbar-mobile-bg: rgba(15, 18, 32, 0.96);
-  --color-footer-bg:  #090B14;
-  --color-footer-text: rgba(238, 241, 255, 0.62);
-  --hero-gradient: linear-gradient(170deg, #0F1220 0%, #1A2040 40%, #2B2340 70%, #2D2634 100%);
-  --contact-gradient: linear-gradient(170deg, #151A2B 0%, #20294A 50%, #31263D 100%);
-  --hero-pattern-a: rgba(154, 140, 255, 0.14);
-  --hero-pattern-b: rgba(215, 161, 178, 0.12);
+  --color-warm-soft:  #3A3338;
+  --color-rose:       #E1AFC8;
+  --color-rose-soft:  #3E335F;
+  --color-border:     #44407A;
+  --color-navbar-bg: rgba(25, 26, 52, 0.84);
+  --color-navbar-mobile-bg: rgba(25, 26, 52, 0.95);
+  --color-footer-bg:  #171730;
+  --color-footer-text: rgba(241, 238, 255, 0.7);
+  --hero-gradient: linear-gradient(170deg, #191A34 0%, #24244A 40%, #322C58 72%, #2D2A46 100%);
+  --contact-gradient: linear-gradient(170deg, #212242 0%, #2B2D58 50%, #37325C 100%);
+  --hero-pattern-a: rgba(168, 150, 255, 0.17);
+  --hero-pattern-b: rgba(225, 175, 200, 0.15);
   --hero-pattern-c: rgba(240, 179, 126, 0.1);
 }
 
@@ -124,6 +125,12 @@ ul {
   margin-bottom: 3rem;
   text-align: center;
   position: relative;
+}
+
+.section-title-deco {
+  font-size: 0.4em;
+  color: inherit;
+  vertical-align: middle;
 }
 
 .section-title::after {
@@ -325,12 +332,17 @@ ul {
 
 .hero-cover img {
   width: min(520px, 46vw);
-  opacity: 0.58;
-  filter: saturate(1.05) contrast(1.05);
+  opacity: 0.42;
+  filter: saturate(0.85) contrast(0.9) brightness(0.95);
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 14px 36px rgba(18, 15, 42, 0.18);
 }
 
 :root[data-theme='dark'] .hero-cover img {
-  opacity: 0.48;
+  opacity: 0.34;
+  border-color: rgba(241, 238, 255, 0.15);
+  box-shadow: 0 16px 40px rgba(10, 9, 26, 0.24);
 }
 
 .hero-bg-pattern {
@@ -700,13 +712,41 @@ ul {
   background: var(--color-bg-alt);
 }
 
+.projects .involvement-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 .projects .involvement-images {
-  justify-content: center;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.projects .keychain-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.projects .project-image-subtitle {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin: 0 0 0.35rem;
 }
 
 .projects .involvement-image img {
-  max-width: 120px;
+  max-width: 220px;
   margin: 0 auto;
+}
+
+.projects .involvement-image img.project-image-keychain {
+  max-width: 140px;
+}
+
+.projects .involvement-image img.project-image-oscilloscope {
+  max-width: min(100%, 220px);
 }
 
 .involvement-grid {
@@ -762,6 +802,10 @@ ul {
   margin-bottom: 0.25rem;
 }
 
+.project-title-centered {
+  text-align: center;
+}
+
 .card-role {
   font-size: 0.875rem;
   color: var(--color-accent);
@@ -807,15 +851,14 @@ ul {
 .involvement-image {
   position: relative;
   border-radius: 16px;
-  padding: 1px;
-  background:
-    linear-gradient(135deg, rgba(108, 99, 255, 0.35), rgba(201, 146, 157, 0.35));
+  padding: 0;
+  background: transparent;
   overflow: hidden;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
 }
 
 .involvement-image img {
-  border-radius: 15px;
+  border-radius: 16px;
   display: block;
 }
 
@@ -827,14 +870,7 @@ ul {
 }
 
 .involvement-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.7) 0, rgba(255, 255, 255, 0.7) 1px, transparent 2px),
-    radial-gradient(circle at 78% 72%, rgba(255, 255, 255, 0.6) 0, rgba(255, 255, 255, 0.6) 1px, transparent 2px);
-  opacity: 0.35;
+  content: none;
 }
 
 /* ---------- Skills ---------- */
@@ -1187,11 +1223,11 @@ ul {
 
   .hero-cover img {
     width: min(560px, 88vw);
-    opacity: 0.28;
+    opacity: 0.34;
   }
 
   :root[data-theme='dark'] .hero-cover img {
-    opacity: 0.22;
+    opacity: 0.28;
   }
 
   .hero-title,
