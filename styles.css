@@ -755,6 +755,10 @@ ul {
   gap: 2rem;
 }
 
+.involvement .involvement-grid {
+  align-items: start;
+}
+
 .involvement-card {
   position: relative;
   background: var(--color-surface);
@@ -1166,6 +1170,10 @@ ul {
   }
 
   .involvement-images {
+    grid-template-columns: 1fr;
+  }
+
+  .projects .keychain-gallery {
     grid-template-columns: 1fr;
   }
 
