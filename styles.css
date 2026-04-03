@@ -593,6 +593,12 @@ ul {
   font-weight: 600;
 }
 
+.highlight-text h4 a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .highlight-text p {
   font-size: 0.8rem;
   color: var(--color-text-light);
