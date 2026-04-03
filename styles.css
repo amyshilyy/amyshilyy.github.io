@@ -753,9 +753,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-}
-
-.involvement .involvement-grid {
+  /* Short cards (e.g. SWE) must not stretch to match a tall sibling in the same row */
   align-items: start;
 }
 
