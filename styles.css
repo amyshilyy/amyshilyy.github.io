@@ -84,8 +84,7 @@ body {
   font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
-  cursor: url("images/custom-cursor.png") 0 0,
-    url("https://www.rw-designer.com/cursor-extern.php?id=200938"), auto;
+  cursor: url("images/custom-cursor-64.png") 32 32, auto;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -101,6 +100,23 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+a,
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+select,
+summary,
+label[for],
+.btn,
+.skill-tag,
+.theme-toggle,
+.nav-toggle,
+.contact-card {
+  cursor: url("images/custom-cursor-64.png") 32 32, pointer;
 }
 
 ul {
@@ -250,7 +266,7 @@ ul {
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  cursor: pointer;
+  cursor: url("images/custom-cursor-64.png") 32 32, pointer;
   transition: all 0.3s var(--ease-out);
 }
 
@@ -288,7 +304,7 @@ ul {
   gap: 5px;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: url("images/custom-cursor-64.png") 32 32, pointer;
   padding: 4px;
 }
 
@@ -455,7 +471,7 @@ ul {
   font-weight: 600;
   letter-spacing: 0.02em;
   transition: all 0.3s var(--ease-out);
-  cursor: pointer;
+  cursor: url("images/custom-cursor-64.png") 32 32, pointer;
 }
 
 .btn-primary {
@@ -937,7 +953,7 @@ ul {
   background: var(--color-bg-alt);
   color: var(--color-text-light);
   border: 1px solid var(--color-border);
-  cursor: pointer;
+  cursor: url("images/custom-cursor-64.png") 32 32, pointer;
   transition: all 0.3s;
 }
 
