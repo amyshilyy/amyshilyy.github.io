@@ -36,9 +36,14 @@
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a7.5 7.5 0 0 0 9 9A9 9 0 1 1 12 3z"/></svg>
-          <span class="theme-toggle-text">Theme</span>
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-circuit-label theme-circuit-label-light">L</span>
+            <span class="theme-circuit-label theme-circuit-label-dark">D</span>
+            <span class="theme-toggle-knob">
+              <span class="theme-toggle-knob-icon">⚡</span>
+            </span>
+          </span>
+          <span class="theme-toggle-text">Circuit Mode</span>
         </button>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
           <span></span>
@@ -124,7 +129,10 @@
                 <h3>Developer</h3>
                 <p class="timeline-company">TekBots · Oregon State University</p>
               </div>
-              <span class="timeline-date">Mar 2026 — Present</span>
+              <span class="timeline-date">
+                <span class="job-status-light job-status-light--active" aria-hidden="true"></span>
+                <span class="job-status-label">Mar 2026 — Present</span>
+              </span>
             </div>
           </div>
         </div>
@@ -136,7 +144,10 @@
                 <h3>Undergraduate Learning Assistant</h3>
                 <p class="timeline-company">Electrical Fundamentals · Oregon State University</p>
               </div>
-              <span class="timeline-date">Jan 2026 — Present</span>
+              <span class="timeline-date">
+                <span class="job-status-light job-status-light--active" aria-hidden="true"></span>
+                <span class="job-status-label">Jan 2026 — Present</span>
+              </span>
             </div>
             <ul class="timeline-details">
               <li>Led weekly laboratory sessions for 25 students, ensuring proper use of power supplies, digital multimeters, and basic electronic components.</li>
@@ -153,7 +164,10 @@
                 <h3>Technology Intern</h3>
                 <p class="timeline-company">Willamette Education Service District</p>
               </div>
-              <span class="timeline-date">Jul 2024 — Aug 2024</span>
+              <span class="timeline-date">
+                <span class="job-status-light job-status-light--inactive" aria-hidden="true"></span>
+                <span class="job-status-label">Jul 2024 — Aug 2024</span>
+              </span>
             </div>
             <ul class="timeline-details">
               <li>Triaged help desk calls at the first point of contact and created tickets for escalations when necessary.</li>
