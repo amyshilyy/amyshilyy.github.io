@@ -35,6 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
       'aria-label',
       isDark ? 'Switch to light mode' : 'Switch to dark mode'
     );
+
+    const themeToggleText = themeToggle.querySelector('.theme-toggle-text');
+    if (themeToggleText) {
+      themeToggleText.textContent = isDark ? 'Dark' : 'Light';
+    }
   };
 
   const applyTheme = (theme) => {

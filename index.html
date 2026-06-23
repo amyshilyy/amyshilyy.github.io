@@ -36,9 +36,10 @@
       </ul>
       <div class="nav-actions">
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
-          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a7.5 7.5 0 0 0 9 9A9 9 0 1 1 12 3z"/></svg>
-          <span class="theme-toggle-text">Theme</span>
+          <span class="theme-toggle-track" aria-hidden="true">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-text">Light</span>
         </button>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
           <span></span>
@@ -88,24 +89,44 @@
           </p>
         </div>
         <div class="about-highlights reveal">
-          <div class="highlight-card">
-            <div class="highlight-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+          <a href="https://open.spotify.com/user/12176853975?si=155bbbe9c76644e5" target="_blank" rel="noopener noreferrer" class="highlight-card spotify-highlight">
+            <div class="highlight-icon spotify-highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M8 10.2c2.7-.8 5.6-.5 8 .8"/>
+                <path d="M8.7 13c2-.6 4.2-.4 6 .6"/>
+                <path d="M9.4 15.6c1.4-.4 2.8-.3 4 .4"/>
+              </svg>
             </div>
             <div class="highlight-text">
-                <h4>3.83 GPA</h4>
-              <p>Oregon State University</p>
+              <h4>Amy's Headphones <span class="highlight-click">CLICK ME</span></h4>
+              <p>Did you know that the average person listens to around 961 hours of music in a year? What is Amy listening to?</p>
             </div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-icon">
+          </a>
+          <div class="highlight-card ford-highlight">
+            <div class="highlight-icon ford-highlight-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2z"/></svg>
             </div>
             <div class="highlight-text">
-              <h4><a href="https://www.tfff.org/" target="_blank" rel="noopener noreferrer">Ford Family Scholar</a></h4>
+              <h4><a href="https://www.tfff.org/" target="_blank" rel="noopener noreferrer">Ford Family Scholar</a> <span class="highlight-click">CLICK ME</span></h4>
               <p>Award Recipient</p>
             </div>
           </div>
+          <a href="https://vsco.co/amyylyy/gallery" target="_blank" rel="noopener noreferrer" class="highlight-card scrapbook-highlight">
+            <div class="highlight-icon scrapbook-highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/>
+                <path d="M4 5.5v16"/>
+                <path d="M8 8h7"/>
+                <path d="M8 12h4"/>
+                <path d="M15.5 13.5 18 16l2.5-3"/>
+              </svg>
+            </div>
+            <div class="highlight-text">
+              <h4>Digital Scrapbook <span class="highlight-click">CLICK ME</span></h4>
+              <p>What does Amy's eyeballs see?</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -121,10 +142,30 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div>
+                <h3>Electric Reliability Engineer Intern</h3>
+                <p class="timeline-company">Pacific Gas and Electric</p>
+                <p class="timeline-location">Oakland, California</p>
+              </div>
+              <span class="timeline-date">
+                <span class="job-status-light job-status-light--active" aria-hidden="true"></span>
+                <span class="job-status-label">Jun 2026 — Present</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
                 <h3>Developer</h3>
                 <p class="timeline-company">TekBots · Oregon State University</p>
+                <p class="timeline-location">Corvallis, Oregon</p>
               </div>
-              <span class="timeline-date">Mar 2026 — Present</span>
+              <span class="timeline-date">
+                <span class="job-status-light job-status-light--active" aria-hidden="true"></span>
+                <span class="job-status-label">Mar 2026 — Present</span>
+              </span>
             </div>
           </div>
         </div>
@@ -135,8 +176,12 @@
               <div>
                 <h3>Undergraduate Learning Assistant</h3>
                 <p class="timeline-company">Electrical Fundamentals · Oregon State University</p>
+                <p class="timeline-location">Corvallis, Oregon</p>
               </div>
-              <span class="timeline-date">Jan 2026 — Present</span>
+              <span class="timeline-date">
+                <span class="job-status-light job-status-light--active" aria-hidden="true"></span>
+                <span class="job-status-label">Jan 2026 — Present</span>
+              </span>
             </div>
             <ul class="timeline-details">
               <li>Led weekly laboratory sessions for 25 students, ensuring proper use of power supplies, digital multimeters, and basic electronic components.</li>
@@ -152,8 +197,12 @@
               <div>
                 <h3>Technology Intern</h3>
                 <p class="timeline-company">Willamette Education Service District</p>
+                <p class="timeline-location">Salem, Oregon</p>
               </div>
-              <span class="timeline-date">Jul 2024 — Aug 2024</span>
+              <span class="timeline-date">
+                <span class="job-status-light job-status-light--inactive" aria-hidden="true"></span>
+                <span class="job-status-label">Jul 2024 — Aug 2024</span>
+              </span>
             </div>
             <ul class="timeline-details">
               <li>Triaged help desk calls at the first point of contact and created tickets for escalations when necessary.</li>
@@ -357,7 +406,7 @@
               <p class="edu-minor">Minor in Computer Science</p>
             </div>
             <div class="edu-meta">
-              <span class="edu-gpa">GPA: 3.83</span>
+              <span class="edu-gpa">GPA: 3.85</span>
               <span class="edu-grad">Graduation: 2028</span>
             </div>
           </div>
